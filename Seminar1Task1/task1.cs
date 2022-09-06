@@ -1,6 +1,6 @@
 ﻿//1 дз
 
-int a, b; //воодим 2 переменные
+int a, b; // воводим 2 переменные.
 Console.WriteLine("Введите первое число : ");
 a = Convert.ToInt32(Console.ReadLine()); //получаем первое число от ользователя
 Console.WriteLine("Введите второе число : ");
