@@ -25,7 +25,7 @@ Seminar5Task1
 Seminar5Task2
 Seminar5Task3
 --------------------------------------------------
-Домашнее задание к семинару 5
+Домашнее задание к семинару 6
 Seminar6Task1
 Seminar6Task2
 Seminar6Task3
