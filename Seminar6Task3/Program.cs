@@ -4,7 +4,7 @@
 //Результат сложения вывести на экран.
 //1, 3, 8, 3, 2 -> 11
 //8, 3, 4, 2 -> 22
-Console.Write("Введите количество чисел? : ");
+Console.Write("Введите количество чисел?  : ");
 int N = Convert.ToInt32(Console.ReadLine());
 
 int[] massiv = new int[N]; // создаем массив
@@ -19,4 +19,4 @@ for (int i = 0; i < N / 2; i++) // счетчик делим число на 2
 {
     sum = sum + massiv[i] * massiv[N - 1 - i];
 }
-Console.WriteLine("Сумма произведений чисел = " + sum + " " );
+Console.WriteLine("Сумма произведений чисел = " + sum + "  " );
