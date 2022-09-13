@@ -18,7 +18,7 @@ for (i = 0; i < m; i++)
     for (j = 0; j < n; j++)
     {
         nums[i,j] = ran.Next(1, 10);
-        Console.Write(nums[i, j] + " ");
+        //Console.Write(nums[i, j] + " ");
     }
     Console.WriteLine();
 }
