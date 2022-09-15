@@ -1,19 +1,20 @@
 ﻿// ДЗ к лекции 8 треугольник паскаля
-int n = InputNumbersRows("Введите количество строк: ");
 
-double[,] pascalTriangle = new double[n + 1, 2 * n + 1];
+int n = InputRows("Введите количество строк : ");
 
-FillPascalTriangle(pascalTriangle);
+double[,] pascalAngle = new double[n + 1, 2 * n + 1];
 
-Console.WriteLine();
-WriteArray(pascalTriangle);
-
-TransformationPascalTriangle(pascalTriangle);
+FullPascalAngle(pascalAngle);
 
 Console.WriteLine();
-WriteArray(pascalTriangle);
+PrintArray(pascalAngle);
 
-void TransformationPascalTriangle(double[,] array)
+TransPascalAngle(pascalAngle);
+
+Console.WriteLine();
+PrintArray(pascalAngle);
+
+void TransPascalAngle(double[,] array)
 {
   for (int i = 0; i < array.GetLength(0); i++)
   {
@@ -31,22 +32,28 @@ void TransformationPascalTriangle(double[,] array)
   array[array.GetLength(0) - 1, 0] = 1;
 }
 
-void FillPascalTriangle(double[,] pascalTriangle)
+void FullPascalAngle(double[,] pascalAngle)
 {
-  for (int k = 0; k < pascalTriangle.GetLength(0); k++)
+  for (int k = 0; k < pascalAngle.GetLength(0); k++)
   {
-    pascalTriangle[k, 0] = 1;
+    pascalAngle[k, 0] = 1;
   }
-  for (int i = 1; i < pascalTriangle.GetLength(0); i++)
+  for (int i = 1; i < pascalAngle.GetLength(0); i++)
   {
     for (int j = 1; j < i + 1; j++)
     {
-      pascalTriangle[i, j] = pascalTriangle[i - 1, j] + pascalTriangle[i - 1, j - 1];
+      pascalAngle[i, j] = pascalAngle[i - 1, j] + pascalAngle[i - 1, j - 1];
     }
   }
 }
+int InputRows(string input)
+{
+  Console.Write(input);
+  int output = Convert.ToInt32(Console.ReadLine());
+  return output;
+}
 
-void WriteArray(double[,] array)
+void PrintArray(double[,] array)
 {
   for (int i = 0; i < array.GetLength(0); i++)
   {
@@ -62,9 +69,3 @@ void WriteArray(double[,] array)
   }
 }
 
-int InputNumbersRows(string input)
-{
-  Console.Write(input);
-  int output = Convert.ToInt32(Console.ReadLine());
-  return output;
-}
