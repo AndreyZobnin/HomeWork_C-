@@ -1,7 +1,5 @@
-﻿Console.Clear();
-Console.WriteLine($"Дополнительная задача 61: Вывести первые N строк треугольника Паскаля. Сделать вывод в виде равнобедренного треугольника.");
-
-int n = InputNumbers("Введите количество строк: ");
+﻿// ДЗ к лекции 8 треугольник паскаля
+int n = InputNumbersRows("Введите количество строк: ");
 
 double[,] pascalTriangle = new double[n + 1, 2 * n + 1];
 
@@ -64,7 +62,7 @@ void WriteArray(double[,] array)
   }
 }
 
-int InputNumbers(string input)
+int InputNumbersRows(string input)
 {
   Console.Write(input);
   int output = Convert.ToInt32(Console.ReadLine());
